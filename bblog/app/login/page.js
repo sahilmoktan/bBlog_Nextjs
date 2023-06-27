@@ -8,10 +8,18 @@ function LoginPage() {
   const router = useRouter()
 
   return (
-    <div>Login Page
+    <div><h2>College Login Page</h2>
+      <br/>
+      <br/>
 
       <Link href="/">Go to Home</Link>
+      <br/>
       <button onClick={()=>router.push('/')}>Go to Home Page</button>
+      <br/>
+      <br/>
+      <Link href="/login/loginStudent">Go to loginStudent</Link>
+      <br/>
+      <Link href="/login/loginTeacher">Go to loginTeacher</Link>
     </div>
   )
 }
