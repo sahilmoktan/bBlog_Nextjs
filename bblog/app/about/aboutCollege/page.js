@@ -5,7 +5,7 @@ import Link from 'next/link'
 function AboutCollege() {
   return (
     
-    <div>About College Page
+    <div> <h1 className='heading'>About College Page</h1>
 
       <br/>
       <br/>

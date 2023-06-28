@@ -5,7 +5,7 @@ import Link from 'next/link'
 function LoginStudent() {
   return (
     
-    <div><h1>This is student LogIn page</h1>
+    <div><h1 className='heading' >This is student LogIn page</h1>
 
       <br/>
       <br/>

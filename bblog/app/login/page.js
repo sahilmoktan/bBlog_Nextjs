@@ -8,7 +8,7 @@ function LoginPage() {
   const router = useRouter()
 
   return (
-    <div><h2>College Login Page</h2>
+    <div><h2 className='heading'>College Login Page</h2>
       <br/>
       <br/>
 

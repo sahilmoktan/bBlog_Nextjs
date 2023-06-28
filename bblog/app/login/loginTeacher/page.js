@@ -5,7 +5,7 @@ import Link from 'next/link'
 function LoginTeacher() {
   return (
     
-    <div><h1>This is Teacher LogIn page</h1>
+    <div><h1 className='heading'>This is Teacher LogIn page</h1>
 
       <br/>
       <br/>

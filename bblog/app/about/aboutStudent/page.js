@@ -5,7 +5,7 @@ import Link from 'next/link'
 function AboutStudent() {
   return (
     <div>
-        About Student Page
+        <h2 className='heading'>About Student Page</h2>
       <br/>
       <br/>
       <Link href="/">Go to Home</Link>

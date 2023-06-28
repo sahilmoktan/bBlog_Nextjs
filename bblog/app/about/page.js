@@ -10,7 +10,7 @@ function AboutPage() {
 
   return (
     <div>
-      About Page
+      <h3 className='heading'>About Page</h3>
 
       <br/>
       <br/>
