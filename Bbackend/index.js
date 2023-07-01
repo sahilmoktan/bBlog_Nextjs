@@ -6,6 +6,8 @@ import dotenv from 'dotenv'
 import helmet from 'helmet';
 import morgan from "morgan";
 import {connectDb} from "./config/dbConnection.js"
+// import registerUser from "./routes/userRoutes.js"
+
 
 
 dotenv.config();
@@ -22,9 +24,9 @@ connectDb();
 
 const port = process.env.PORT || 6001;
 
-
+/*route */
 // app.use("/api/contacts", require("./routes/contactRoutes"));
-// app.use("/api/users", require("./routes/userRoutes"));
+// app.use("/api/users", registerUser);
 
 app.listen(port, () => {
   console.log(`Server running on port: ${port}`);
