@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 
-function AboutCollege() {
+export default function AboutCollege() {
   return (
     
     <div> <h1 className='heading'>About College Page</h1>
@@ -19,4 +19,10 @@ function AboutCollege() {
   )
 }
 
-export default AboutCollege
+
+export function generateMetadata(){
+  return{
+    title:"about College page title",
+    description:"about College page title"
+  }
+}

@@ -4,7 +4,7 @@ import React from 'react'
 import { useRouter } from 'next/navigation'
 
 
-function LoginPage() {
+export default function LoginPage() {
   const router = useRouter()
 
   return (
@@ -24,4 +24,4 @@ function LoginPage() {
   )
 }
 
-export default LoginPage
+
