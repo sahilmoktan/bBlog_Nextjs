@@ -1,14 +1,16 @@
-const express = require("express");
-const bodyParser = require ("body-parser");
-const cors = require('cors');
-const dotenv = require("dotenv").config();
+import express from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
+import dotenv from 'dotenv'
 // import multer from "multer";
-const helmet = require('helmet')
-const morgan = require('morgan')
-const connectDb = require("./config/dbConnection");
+import helmet from 'helmet';
+import morgan from "morgan";
+import {connectDb} from "./config/dbConnection.js"
+import registerUser from "./routes/userRoutes.js"
 
 
 
+dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(helmet())
@@ -22,10 +24,10 @@ connectDb();
 
 const port = process.env.PORT || 6001;
 
-/*route */
-app.use("/api/users", require("./routes/userRoutes"));
-// app.use("/api/contacts", require("./routes/contactRoutes"));
+/*route register */
+app.use("/api/users", registerUser);
 
+// app.use("/api/contacts", require("./routes/contactRoutes"));
 
 app.listen(port, () => {
   console.log(`Server running on port: ${port}`);

@@ -1,10 +1,11 @@
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const User = require("../models/userModel");
-const asyncHandler = require("express-async-handler");
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import {User} from "../models/userModel.js";
+import asyncHandler from "express-async-handler";
 
 // Register a user
 const registerUser = asyncHandler(async (req, res) => {
+    console.log('am hit helo')
   const {
     firstname,
     lastname,
@@ -24,7 +25,7 @@ const registerUser = asyncHandler(async (req, res) => {
   }
   const userAvailable = await User.findOne({ email });
   if (userAvailable) {
-    res.status(400);
+    res.status(400).json(error);
     throw new Error("User already registered!");
   }
   //hash password
@@ -39,8 +40,8 @@ const registerUser = asyncHandler(async (req, res) => {
     friends,
     location,
     occupation,
-    viewProfile: Math.floor(Math.random()*1000),
-    impression: Math.floor(Math.random()*1000),
+    viewProfile: Math.floor(Math.random() * 1000),
+    impression: Math.floor(Math.random() * 1000),
   });
   // console.log(`User created ${user}`);
   if (user) {
@@ -52,6 +53,10 @@ const registerUser = asyncHandler(async (req, res) => {
   // res.json({ message: "Registered the user" });
 });
 
+export default registerUser;
 
-
-module.exports= {registerUser}
+// module.exports= {registerUser}
+// export {
+//     loginUser,
+//   currentUser,
+// };
