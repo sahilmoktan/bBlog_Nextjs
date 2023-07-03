@@ -5,68 +5,75 @@ import Link from "next/link";
 
 function RegisterPage() {
   return (
-    <section class="container">
+    <section className="container">
+      <div className="title">
       <header>Sign Up</header>
-      <form action="#" class="form">
-        <div class="input-box">
-          <label>Full Name</label>
+      </div>
+      <form action="#" className="form">
+      <div className="column">
+        <div className="input-box">
+          <label>First Name</label>
           <input type="text" placeholder="Enter full name" required />
         </div>
-        <div class="input-box">
+        <div className="input-box">
+          <label>Last Name</label>
+          <input type="text" placeholder="Enter full name" required />
+        </div>
+        </div>
+        <div className="input-box">
           <label>Email Address</label>
           <input type="text" placeholder="Enter email address" required />
         </div>
-        <div class="column">
-          <div class="input-box">
+        
+        <div className="column">
+          <div className="input-box">
+          <label>Password</label>
+          <input type="password" placeholder="Enter Password" required />
+        </div>
+          <div className="input-box">
+          <label>Confirm Password</label>
+          <input type="password" placeholder="Enter Password Again" required />
+        </div>
+        </div>
+        
+        <div className="column">
+          <div className="input-box">
             <label>Phone Number</label>
             <input type="number" placeholder="Enter phone number" required />
           </div>
-          <div class="input-box">
+          <div className="input-box">
             <label>Birth Date</label>
             <input type="date" placeholder="Enter birth date" required />
           </div>
         </div>
-        <div class="gender-box">
+        <div className="gender-box">
           <h3>Gender</h3>
-          <div class="gender-option">
-            <div class="gender">
-              <input type="radio" id="check-male" name="gender" checked />
-              <label for="check-male">male</label>
+          <div className="gender-option">
+            <div className="gender">
+              <input type="radio" id="check-male" name="gender"/>
+              <label>Male</label>
             </div>
-            <div class="gender">
+            <div className="gender">
               <input type="radio" id="check-female" name="gender" />
-              <label for="check-female">Female</label>
+              <label>Female</label>
             </div>
-            <div class="gender">
+            <div className="gender">
               <input type="radio" id="check-other" name="gender" />
-              <label for="check-other">prefer not to say</label>
+              <label>Other</label>
             </div>
           </div>
         </div>
-        <div class="input-box address">
-          <label>Address</label>
-          <input type="text" placeholder="Enter street address" required />
-          <input type="text" placeholder="Enter street address line 2" required />
-          <div class="column">
-            <div class="select-box">
-              <select>
-                <option hidden>Country</option>
-                <option>America</option>
-                <option>Japan</option>
-                <option>India</option>
-                <option>Nepal</option>
-              </select>
-            </div>
-            <input type="text" placeholder="Enter your city" required />
-          </div>
-          <div class="column">
-            <input type="text" placeholder="Enter your region" required />
-            <input type="number" placeholder="Enter postal code" required />
-          </div>
+        <div className="input-box address">
+          <label>Location</label>
+          <input type="text" placeholder="Enter Your address" required />
         </div>
+        <div className="input-box address">
+        <label>Occupation</label>
+          <input type="text" placeholder="Your Occupation" required />
+          </div>
         <button>Submit</button>
-        <label>
-                  Already have an account? </label> <Link href='/login' >Login now</Link> 
+        <label style={{color:'#707070',marginTop:'10px'}}>Already have an account? </label> 
+        <Link href='/login' >Login now</Link> 
       </form>
     </section>
   );
