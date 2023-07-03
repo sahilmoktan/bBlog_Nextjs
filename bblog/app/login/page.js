@@ -1,27 +1,44 @@
 'use client'
-import Link from 'next/link'
-import React from 'react'
-import { useRouter } from 'next/navigation'
+import React, { useState } from 'react';
+import styles from './login.css';
 
+export default function Login() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-export default function LoginPage() {
-  const router = useRouter()
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Add your login logic here
+    console.log('Username:', username);
+    console.log('Password:', password);
+  };
 
   return (
-    <div><h2 className='heading'>College Login Page</h2>
-      <br/>
-      <br/>
-
-      <Link href="/">Go to Home</Link>
-      <br/>
-      <button onClick={()=>router.push('/')}>Go to Home Page</button>
-      <br/>
-      <br/>
-      <Link href="/login/loginStudent">Go to loginStudent</Link>
-      <br/>
-      <Link href="/login/loginTeacher">Go to loginTeacher</Link>
+    <div className={styles.container}>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <h1>Login</h1>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={handleUsernameChange}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={handlePasswordChange}
+        />
+        <button type="submit">Login</button>
+      </form>
     </div>
-  )
+  );
 }
-
-
