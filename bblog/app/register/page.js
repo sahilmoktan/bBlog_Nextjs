@@ -1,11 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
 
 
 
 function RegisterPage() {
   return (
-    <section className="container">
+    <section className="container" style={{width:"700px"}}>
       <div className="title">
       <header>Sign Up</header>
       </div>
@@ -71,9 +71,9 @@ function RegisterPage() {
         <label>Occupation</label>
           <input type="text" placeholder="Your Occupation" required />
           </div>
-        <button>Submit</button>
+        <button>Create My Account</button>
         <label style={{color:'#707070',marginTop:'10px'}}>Already have an account? </label> 
-        <Link href='/login' >Login now</Link> 
+        <Link href='/login'>Login now</Link> 
       </form>
     </section>
   );
