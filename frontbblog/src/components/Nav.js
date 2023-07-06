@@ -13,7 +13,7 @@ const Nav=()=>{
     console.log(auth)
   
     return(
-        <div>
+        <div className="navbar">
             {/* <img alt="logo" className="logo" src="https://avatars.githubusercontent.com/u/103031235?v=4"/> */}
             {auth?
                 <ul className="nav-ul">
