@@ -64,7 +64,7 @@ function Login() {
                   />
                 </div>
                 <div className="input-box">
-                  {/* <i className="fas fa-lock"></i> */}
+                  
                   <input
                     type="password"
                     placeholder="Enter your password"
