@@ -67,7 +67,8 @@ function Register() {
   };
 
   return (
-    <section className="Registercontainer" style={{ width: "700px" }}>
+    <div className="regcontainer">
+    <section className="Registercontainer">
       <Formik
         initialValues={{ password: "", confirmPassword: "" }}
         validationSchema={validationSchema}
@@ -127,8 +128,7 @@ function Register() {
                 placeholder="Enter Password Again"
                 onChange={(e) => setconfirmPassword(e.target.value)}
                 value={confirmPassword}
-                required
-              />
+                required/>
               <ErrorMessage name="confirmPassword" component="div" />
             </div>
           </div>
@@ -201,6 +201,7 @@ function Register() {
         </Form>
       </Formik>
     </section>
+    </div>
   );
 }
 
