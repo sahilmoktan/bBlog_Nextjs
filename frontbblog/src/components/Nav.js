@@ -27,7 +27,7 @@ const Nav=()=>{
                 </ul>:
                 
                 <ul className="nav-ul NAV-RIGHT">
-                <li><Link to="/signUp">SignUp</Link></li>
+                <li><Link to="/register">SignUp</Link></li>
                 <li><Link to="/login">Login</Link></li>
                 </ul>}
             

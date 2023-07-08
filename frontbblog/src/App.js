@@ -12,7 +12,6 @@ function App() {
       <BrowserRouter>
       <Nav/>
       <Routes>
-        {/* <Route path="/signup" element={<SignUp/>}/> */}
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
       </Routes>

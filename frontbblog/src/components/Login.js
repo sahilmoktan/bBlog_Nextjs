@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
-import myImage from '../mot.jpg';
+// import myImage from '../mot.jpg';
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -37,7 +37,7 @@ function Login() {
       <div className="container">
       <div className="cover">
           <div className="front">
-            <img src={myImage} alt="Description of the image"/>
+            {/* <img src={myImage} alt="Description of the image"/> */}
             <div className="text">
               <span className="text-1">
                 Every new friend is a <br /> new adventure
@@ -91,7 +91,7 @@ function Login() {
 
                 <div className="text sign-up-text">
                   Don't have an account?{" "}
-                  <Link href="/register">Create New Account</Link>
+                  <Link to="/register">Create New Account</Link>
                 </div>
               </div>
             </div>
