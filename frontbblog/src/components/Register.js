@@ -67,7 +67,7 @@ function Register() {
   };
 
   return (
-    <section className="container" style={{ width: "700px" }}>
+    <section className="Registercontainer" style={{ width: "700px" }}>
       <Formik
         initialValues={{ password: "", confirmPassword: "" }}
         validationSchema={validationSchema}

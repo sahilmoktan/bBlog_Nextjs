@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
-// import myImage from '../mot.jpg';
+import myImage from '../mot.jpg';
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -32,12 +32,13 @@ function Login() {
   };
 
   return (
-    <div className="logincontainer">
+    <div className="blogincontainer">
       
-      <div className="container">
+      <div className="logincontainer">
+        <div className="forms">
       <div className="cover">
           <div className="front">
-            {/* <img src={myImage} alt="Description of the image"/> */}
+            <img src={myImage} alt="Mountain and pond"/>
             <div className="text">
               <span className="text-1">
                 Every new friend is a <br /> new adventure
@@ -46,7 +47,6 @@ function Login() {
             </div>
           </div>
         </div>
-        <div className="forms">
           
           <div className="form-content">
             <div className="login-form">
