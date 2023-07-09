@@ -14,12 +14,12 @@ const Nav=()=>{
   
     return(
         <div className="navbar">
-            {/* <img alt="logo" className="logo" src="https://avatars.githubusercontent.com/u/103031235?v=4"/> */}
+            
             {auth?
                 <ul className="nav-ul">
-                <li><Link to="/">Products</Link></li>
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/add">Add Products</Link></li>
-                <li><Link to="/update">Update Products</Link></li>
+                <li><Link to="/update">About</Link></li>
            
                 <li><Link to="/profile">Profile</Link></li>
                 <li><Link onClick={logout} to="/login">Logout({JSON.parse(auth).name})</Link></li>

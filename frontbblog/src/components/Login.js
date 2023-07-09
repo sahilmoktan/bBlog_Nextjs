@@ -1,34 +1,36 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import "./login.css";
 import myImage from '../mot.jpg';
 
 function Login() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [confirmPassword, setPassword] = useState("");
+  const navigate = useNavigate()
 
   const handleLogin = async () => {
-    console.log(email, password);
+    console.log(email, confirmPassword);
 
-    // let result = await fetch("http://localhost:3001/api/users/login", {
-    //     method: 'post',
-    //     body:JSON.stringify({email,password}),
-    //     headers:{
-    //         'Content-Type': 'application/json'
-    //     }
-    //  })
-    // result = await result.json()
-    // console.warn(result)
 
-    // if(result.accessToken){
+    let result = await fetch("http://localhost:3001/api/users/login", {
+        method: 'post',
+        body:JSON.stringify({email,confirmPassword}),
+        headers:{
+            'Content-Type': 'application/json'
+        }
+     })
+    result = await result.json()
+    console.warn(result)
 
-    //     localStorage.setItem('user',JSON.stringify(result.user))
-    //     localStorage.setItem('token',JSON.stringify(result.accessToken))
-    //     navigate('/')
-    // } else{
-    //     console.log("please enter correct details");
-    //     alert("please enter correct details")
-    // }
+    if(result.accessToken){
+
+        localStorage.setItem('user',JSON.stringify(result.user))
+        localStorage.setItem('token',JSON.stringify(result.accessToken))
+        navigate('/')
+    } else{
+        console.log("please enter correct details");
+        alert("please enter correct details")
+    }
   };
 
   return (
@@ -69,7 +71,7 @@ function Login() {
                     type="password"
                     placeholder="Enter your password"
                     onChange={(e) => setPassword(e.target.value)}
-                    value={password}
+                    value={confirmPassword}
                     required
                   />
                 </div>

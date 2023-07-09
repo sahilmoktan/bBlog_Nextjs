@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import { useNavigate } from "react-router-dom";
-import * as Yup from "yup";
+import { Link, useNavigate } from "react-router-dom";
+// import { Formik, Form, input, ErrorMessage } from "formik";
+// import * as Yup from "yup";
 import "./register.css";
 
 function Register() {
@@ -24,14 +23,14 @@ function Register() {
     }
   })
 
-  const validationSchema = Yup.object().shape({
-    password: Yup.string()
-      .min(6, "Password must be at least 6 characters")
-      .required("Password is required"),
-    confirmPassword: Yup.string()
-      .oneOf([Yup.ref("password"), null], "Passwords must match")
-      .required("Confirm Password is required"),
-  });
+  // const validationSchema = Yup.object().shape({
+  //   password: Yup.string()
+  //     .min(6, "Password must be at least 6 characters")
+  //     .required("Password is required"),
+  //   confirmPassword: Yup.string()
+  //     .oneOf([Yup.ref("password"), null], "Passwords must match")
+  //     .required("Confirm Password is required"),
+  // });
 
   const handleregister = async () => {
     console.log(
@@ -69,11 +68,11 @@ function Register() {
   return (
     <div className="regcontainer">
     <section className="Registercontainer">
-      <Formik
+      {/* <Formik
         initialValues={{ password: "", confirmPassword: "" }}
         validationSchema={validationSchema}
-      >
-        <Form action="#" className="form">
+      > */}
+        <form action="#" className="form">
         <div className="title">
           <header>Sign Up</header>
         </div>
@@ -113,7 +112,7 @@ function Register() {
           <div className="column">
             <div className="input-box">
               <label>Password</label>
-              <Field
+              <input
                 type="password"
                 placeholder="Enter Password"
                 onChange={(e) => setPassword(e.target.value)}
@@ -123,13 +122,13 @@ function Register() {
             </div>
             <div className="input-box">
               <label>Confirm Password</label>
-              <Field
+              <input
                 type="password"
                 placeholder="Enter Password Again"
                 onChange={(e) => setconfirmPassword(e.target.value)}
                 value={confirmPassword}
                 required/>
-              <ErrorMessage name="confirmPassword" component="div" />
+              {/* <ErrorMessage name="confirmPassword" component="div" /> */}
             </div>
           </div>
 
@@ -198,8 +197,8 @@ function Register() {
             Already have an account?{" "}
           </label>
           <Link to="/login">Login now</Link>
-        </Form>
-      </Formik>
+        </form>
+      {/* </Formik> */}
     </section>
     </div>
   );
