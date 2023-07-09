@@ -4,7 +4,7 @@ import {User} from "../models/userModel.js";
 import asyncHandler from "express-async-handler";
 
 // Register a user
-const registerUser = asyncHandler(async (req, res) => {
+export const registerUser = asyncHandler(async (req, res) => {
     console.log('am hit register')
   const {
     firstname,
@@ -51,10 +51,39 @@ const registerUser = asyncHandler(async (req, res) => {
   // res.json({ message: "Registered the user" });
 });
 
-export default registerUser;
 
-// module.exports= {registerUser}
+
+//Login user
+export const loginUser = asyncHandler(async (req, res) => {
+  console.log('am hit login')
+  const { email, confirmPassword } = req.body;
+  if (!email || !confirmPassword) {
+    res.status(400).send("All fields are Mandatory");
+  } else {
+    const user = await User.findOne({ email }).select("-confirmPassword");
+    if (user) {
+      const accessToken = jwt.sign(
+        {
+          user: {
+            email: user.email,
+            id: user.id,
+          },
+        },
+        process.env.ACCESS_TOKEN_SECERT,
+        { expiresIn: "15m" }
+      );
+      res.status(200).json({ accessToken, user })
+      
+    } else {
+      res.send("User not found");
+    }
+  }
+});
+
+
+// export default registerUser;
 // export {
+//   registerUser,
 //     loginUser,
-//   currentUser,
+  
 // };

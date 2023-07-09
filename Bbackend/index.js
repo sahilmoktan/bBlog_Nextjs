@@ -6,7 +6,11 @@ import dotenv from 'dotenv'
 import helmet from 'helmet';
 import morgan from "morgan";
 import {connectDb} from "./config/dbConnection.js"
-import registerUser from "./routes/userRoutes.js"
+
+
+import userRoutes from "./routes/userRoutes.js"
+// import loginUser from "./routes/userRoutes.js"
+
 
 
 
@@ -19,15 +23,16 @@ app.use(morgan("common"))
 app.use(bodyParser.json({limit:'30mb', extended:'true'}))
 app.use(bodyParser.urlencoded({limit:'30mb', extended:'true'}))
 app.use(cors())
-
 connectDb();
+
 
 const port = process.env.PORT || 6001;
 
 /*route register */
-app.use("/api/users", registerUser);
+app.use("/api/users", userRoutes);
 
-// app.use("/api/contacts", require("./routes/contactRoutes"));
+
+
 
 app.listen(port, () => {
   console.log(`Server running on port: ${port}`);
