@@ -22,7 +22,7 @@ const Nav=()=>{
                 <li><Link to="/update">About</Link></li>
            
                 <li><Link to="/profile">Profile</Link></li>
-                <li><Link onClick={logout} to="/login">Logout({JSON.parse(auth).name})</Link></li>
+                <li><Link onClick={logout} to="/login">Logout({JSON.parse(auth).firstname})</Link></li>
                 
                 </ul>:
                 
