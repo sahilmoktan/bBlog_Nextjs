@@ -1,8 +1,17 @@
-import React from 'react'
+import "./home.css"
+import Sidebar from '../../components/sidebar/Sidebar'
+import Feed from "../../components/feed/Feed"
+import Righbar from "../../components/rightbar/Rightbar"
+
+
 
 function Home() {
   return (
-    <div>this is Home page</div>
+    <div className="homeContainer">
+      <Sidebar/>
+      <Feed/>
+      <Righbar/>
+    </div>
   )
 }
 
