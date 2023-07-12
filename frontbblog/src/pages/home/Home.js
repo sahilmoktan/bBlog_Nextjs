@@ -10,7 +10,7 @@ function Home() {
     <div className="homeContainer">
       <Sidebar/>
       <Feed/>
-      <Righbar/>
+      {/* <Righbar/> */}
     </div>
   )
 }
