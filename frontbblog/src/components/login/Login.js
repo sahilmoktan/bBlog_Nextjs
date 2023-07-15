@@ -26,7 +26,7 @@ function Login() {
 
         localStorage.setItem('user',JSON.stringify(result.user))
         localStorage.setItem('token',JSON.stringify(result.accessToken))
-        navigate('/')
+        navigate('/home')
     } else{
         console.log("please enter correct details");
         alert("please enter correct details")
