@@ -5,6 +5,7 @@ import myImage from "../../bblogIcon.png";
 const Nav = () => {
   const auth = localStorage.getItem("user");
   const navigate = useNavigate();
+  
   const logout = () => {
     localStorage.clear();
     navigate("/");
