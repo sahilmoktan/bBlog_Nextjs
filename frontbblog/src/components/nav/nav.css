@@ -3,6 +3,7 @@
   float: left;
   border-radius: 50%;
   margin-top: 3px;
+  margin-bottom: 3px;
   margin-left: 20px;
 }
 
@@ -29,8 +30,10 @@
   top: 0;
   display: flex;
   background-color: #7d2ae8;
+  justify-content: space-between;
 
 }
+
 .searchbar{
 margin-top: auto;
 width: 300px;
@@ -50,4 +53,8 @@ width: 300px;
   padding: 5px;
   margin: 0;
   background-color: #7d2ae8;
+}
+
+.profile{
+  margin-right: 5px;
 }
