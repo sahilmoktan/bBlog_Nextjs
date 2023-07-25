@@ -50,7 +50,7 @@ const Nav = () => {
           //   </li>
           // </ul>
           <>
-          <div className="mid_icons">
+          <div className="mid_icons_mid_icons--active">
             <HomeIcon />
           </div>
           <div className="mid_icons">
@@ -77,14 +77,13 @@ const Nav = () => {
 
       <div className="profile">
         <div>
-
         <img
           alt="logo"
           className="logo"
           src="https://avatars.githubusercontent.com/u/103031235?v=4"
           />
           </div>
-        <div>
+        <div className="logoutdiv">
           <Link onClick={logout} to="/login">
             Logout({JSON.parse(auth).firstname})
           </Link>
