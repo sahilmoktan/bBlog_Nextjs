@@ -18,7 +18,7 @@ function Home() {
     <>
     {auth ? (
       <div className="homeContainer">
-      <Nav/>
+        <Nav/>
       <Sidebar/>
       <Feed/>
       <Righbar/>

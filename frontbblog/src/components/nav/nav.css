@@ -45,20 +45,22 @@ border-radius: 999px;
   justify-content: center;
 }
 
-/* .mid_icons_mid_icons--active>.MuiSvgIcon-root{
-color: #190633;
-} */
-
-/* .mid_icons_mid_icons--active>.MuiSvgIcon-root{
-  border-bottom: 4px solid #7d2ae8;
-} */
-
 .mid_icons> .MuiSvgIcon-root{
-  color: rgb(255, 255, 255);
+  color: #ffffff;
+
 }
 
 .mid_icons:hover> .MuiSvgIcon-root{
-  color: #250a49
+  color: #1f0725;
+}
+
+.mid_icons--active>.MuiSvgIcon-root{
+color: #1f0725;
+}
+
+.mid_icons--active{
+  background-color: #f3f3f3;
+  border-radius: 5px;
 }
 
 .mid_icons{
@@ -68,27 +70,29 @@ color: #190633;
   cursor: pointer;
 }
 
-.logoutdiv Link{
-  text-decoration: none;
-  color: white;
-  }
 
-/* .mid_icons:hover {
-  background-color: #671cc9;
+.mid_icons:hover {
+  background-color: #c8c6ca;
   border-radius: 5px;
   align-items: center;
   padding: 0 30px;
   border-bottom: none;
-  height: 200%;
-} */
+}
 
 
 .profile{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.profile .logoutdiv a {
   text-decoration: none;
-  
+  color: white;
+}
+
+.profile button{
+  color: #ffffff;
 }
 
 

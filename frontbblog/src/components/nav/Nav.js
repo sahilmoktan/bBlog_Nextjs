@@ -7,9 +7,9 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import GroupsIcon from "@mui/icons-material/Groups";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import { IconButton } from "@material-ui/core";
-import AddIcon from '@mui/icons-material/Add';
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import MessageIcon from '@mui/icons-material/Message';
+// import AddIcon from '@mui/icons-material/Add';
+import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
+import MessageIcon from "@mui/icons-material/Message";
 
 const Nav = () => {
   const auth = localStorage.getItem("user");
@@ -37,66 +37,39 @@ const Nav = () => {
       </div>
 
       <div className="nav_midsection">
-        {auth ? (
-          // <ul className="nav-ul">
-          //   <li>
-          //     <Link to="/home">Home</Link>
-          //   </li>
-          //   <li>
-          //     <Link to="/add">Add Products</Link>
-          //   </li>
-          //   <li>
-          //     <Link to="/update">About</Link>
-          //   </li>
-          // </ul>
-          <>
-          <div className="mid_icons_mid_icons--active">
-            <HomeIcon />
-          </div>
-          <div className="mid_icons">
-            <StorefrontIcon />
-          </div>
-          <div className="mid_icons">
-            <GroupsIcon />
-            </div>
-            <div className="mid_icons">
-            <SportsEsportsIcon />
-            </div>
-            </>
-        ) : (
-          <ul className="nav-ul NAV-RIGHT">
-            <li>
-              <Link to="/register">SignUp</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          </ul>
-        )}
+        <div className="mid_icons mid_icons--active">
+          <HomeIcon />
+        </div>
+        <div className="mid_icons">
+          <StorefrontIcon />
+        </div>
+        <div className="mid_icons">
+          <GroupsIcon />
+        </div>
+        <div className="mid_icons">
+          <SportsEsportsIcon />
+        </div>
       </div>
 
       <div className="profile">
+        <IconButton>
+          <MessageIcon />
+        </IconButton>
+        <IconButton>
+          <NotificationsActiveIcon />
+        </IconButton>
         <div>
-        <img
-          alt="logo"
-          className="logo"
-          src="https://avatars.githubusercontent.com/u/103031235?v=4"
+          <img
+            alt="logo"
+            className="logo"
+            src="https://avatars.githubusercontent.com/u/103031235?v=4"
           />
-          </div>
+        </div>
         <div className="logoutdiv">
           <Link onClick={logout} to="/login">
             Logout({JSON.parse(auth).firstname})
           </Link>
         </div>
-        <IconButton >
-          <AddIcon/>
-        </IconButton>
-        <IconButton >
-          <MessageIcon/>
-        </IconButton>
-        <IconButton>
-          <NotificationsActiveIcon/>
-        </IconButton>
       </div>
     </div>
   );
