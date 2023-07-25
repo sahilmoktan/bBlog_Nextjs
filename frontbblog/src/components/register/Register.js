@@ -20,6 +20,8 @@ function Register() {
     const auth = localStorage.getItem('user')
     if(auth){
         navigate('/')
+    }else{
+     navigate('/home')
     }
   })
 
