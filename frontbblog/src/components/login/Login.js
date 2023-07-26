@@ -77,7 +77,7 @@ function Login() {
                   />
                 </div>
                 <div className="text">
-                  <Link href="/register">Forgot password?</Link>
+                  <Link to="/register">Forgot password?</Link>
                 </div>
                 {/* <div className="button input-box">
                   <input type="submit" value="Sumbityy" />
