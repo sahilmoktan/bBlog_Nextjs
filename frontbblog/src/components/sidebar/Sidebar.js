@@ -1,24 +1,13 @@
+import Sidebaricons from "../sidebaricons/Sidebaricons";
+import Sidebarprofile from "../sidebarprofile/Sidebarprofile";
 import "./sidebar.css";
-// import {
-//   RssFeed,
-//   Chat,
-//   PlayCircleFilledOutlined,
-//   Group,
-//   Bookmark,
-//   HelpOutline,
-//   WorkOutline,
-//   Event,
-//   School,
-// } from "@material-ui/icons";
-// import { Users } from "../../dummyData";
-// import CloseFriend from "../closeFriend/CloseFriend";
 
 export default function Sidebar() {
+
   return (
     <div className="sidebar">
-      <div className="sidebarWrapper">
-        <h3>This is side bar</h3>
-      </div>
+      <Sidebarprofile/>
+      <Sidebaricons />
     </div>
   );
 }
