@@ -9,26 +9,50 @@ import Login from "../../components/login/Login";
 
 
 
+// function Home() {
+//   const navigate = useNavigate()
+//   const auth = localStorage.getItem("user");
+//   navigate("/home");
+
+//   return (
+//     <>
+//     {auth ? (
+//     <div className="h">
+
+//     <Nav/>
+//     <div className="homeContainer">
+//       <Sidebar/>
+//       <Feed/>
+//       <Righbar/>
+//       </div>
+//     </div>
+//       ) : (
+//         <Login/>
+//         )}
+//     </>
+//   )
+// }
+
 function Home() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const auth = localStorage.getItem("user");
-  navigate("/home");
+
+  if (!auth) {
+    // If the user is not authenticated, redirect to the login page
+    navigate("/login");
+    return <Login />;
+  }
 
   return (
-    <>
-    {auth ? (
+    <div className="h">
+      <Nav />
       <div className="homeContainer">
-        <Nav/>
-      <Sidebar/>
-      <Feed/>
-      <Righbar/>
+        <Sidebar />
+        <Feed />
+        <Righbar />
+      </div>
     </div>
-        ) : (
-          <Login/>
-        )}
-    {/* <Footer/> */}
-    </>
-  )
+  );
 }
 
 export default Home

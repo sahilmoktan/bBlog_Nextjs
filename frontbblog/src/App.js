@@ -3,8 +3,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './components/login/Login';
 import Register from './components/register/Register'
 import Home from './pages/home/Home';
+// import ProtectedRoute from "./components/ProtectedRoute";
+
 
 function App() {
+  
   return (
     <div className="App">
       <BrowserRouter>
