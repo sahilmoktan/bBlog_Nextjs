@@ -1,0 +1,20 @@
+.Sidebaricons .MuiIconButton-label {
+    padding: 0px 30px;
+}
+
+
+/* .Sidebaricons:hover.MuiIconButton-label button{
+background-color: transparent;
+} */
+
+ 
+.sidIbar:hover{
+    background-color: rgb(211, 211, 211);
+    width: 20vw;
+    border-radius: 10px;
+    
+}
+
+.Sidebaricons h6{
+    margin-left: 5px;
+}
