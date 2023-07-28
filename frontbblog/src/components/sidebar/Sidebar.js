@@ -1,5 +1,5 @@
-import Sidebaricons from "../sidebaricons/Sidebaricons";
-import Sidebarprofile from "../sidebarprofile/Sidebarprofile";
+import Sidebaricons from "./Sidebaricons";
+import Sidebarprofile from "./Sidebarprofile";
 import "./sidebar.css";
 
 export default function Sidebar() {

@@ -34,7 +34,8 @@ function Register() {
   //     .required("Confirm Password is required"),
   // });
 
-  const handleregister = async () => {
+  const handleregister = async (e) => {
+    e.preventDefult();
     console.log(
       firstname,
       lastname,
