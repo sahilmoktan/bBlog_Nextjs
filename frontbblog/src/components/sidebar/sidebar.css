@@ -1,6 +1,6 @@
 .sidebar{
-    width: 20vw;
-    height: 90vh;
+    width: 20%;
+    /* height: 90vh; */
     /* background-color: rgb(112, 112, 139); */
     padding: 25px 10px;
     flex: 0.33;
