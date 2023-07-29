@@ -1,16 +1,25 @@
 .Sidebaricons .MuiIconButton-label {
-    padding: 0px 30px;
+    /* padding: 0px 30px; */
 }
 
+.Sidebaricons{
+    width: 15vw;
+    display: grid;
+    padding: 10px 0px;
+    
+}
 
-/* .Sidebaricons:hover.MuiIconButton-label button{
-background-color: transparent;
-} */
+.sidIbar{
+    margin-top: 10px;
+    /* justify-content: left; */
+    width: 100%;
+    /* background-color: aqua; */
+}
 
  
 .sidIbar:hover{
     background-color: rgb(211, 211, 211);
-    width: 20vw;
+    /* width: 20vw; */
     border-radius: 10px;
     
 }

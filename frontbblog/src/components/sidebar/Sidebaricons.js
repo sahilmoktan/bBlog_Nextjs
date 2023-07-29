@@ -15,12 +15,7 @@ import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 
 export default function Sidebaricons() {
   return (
-    <div className='Sidebaricons' style={{
-      justifyContent: "left",
-        display: "grid",
-        gridTemplateRows: "repeat(auto-fill, 40px)", // Buttons will have a minimum height of 40px and take equal available vertical space
-        gap: "10px", // Optional: Add spacing between the buttons 
-      }}>
+    <div className='Sidebaricons'>
         <div className="sidIbar">
       <IconButton>
           <PeopleIcon /> <h6> Friends</h6>
