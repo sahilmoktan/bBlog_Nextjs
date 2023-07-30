@@ -1,10 +1,10 @@
+import Sponsored from './Sponsored';
+import './rightbar.css'
 
 export default function Righbar() {
   return (
     <div className="rightbar">
-      <div className="feedWrapper">
-       
-      </div>
+      <Sponsored/>
     </div>
   );
 }

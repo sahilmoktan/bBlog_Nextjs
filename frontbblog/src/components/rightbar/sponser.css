@@ -1,0 +1,35 @@
+.sponsered {
+  margin-left: 15px;
+  width: 18vw;
+  /* background-color: brown; */
+  justify-content: center;
+  color: #7d2ae8;
+  border-bottom: 1px solid #dadbdd;
+  margin-top: 20px;
+}
+
+.sponser {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.sponser_img {
+  width: 40%;
+  margin-right: 10px;
+}
+
+.sponser_img > img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.sponser_details {
+  color: gray;
+  font-size: medium;
+}
+
+.sponser_details > p {
+  font-size: small;
+}
