@@ -5,4 +5,5 @@ Login Page Screenshot
 
 
 Home Page Screenshot
-![Screenshot from 2023-08-21 15-40-47](https://github.com/sahilmoktan/bBlog_Nextjs/assets/103031235/3f5b3faf-cf7a-42ee-aac0-b8721a30c279)
+![Screenshot from 2023-08-21 15-42-09](https://github.com/sahilmoktan/bBlog_Nextjs/assets/103031235/ef0eb2a7-0948-4e41-87db-0dbbe82169e5)
+
